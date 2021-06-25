@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:background="@color/secondary"
+        android:id="@+id/topDivider"
+        android:layout_height="2dp"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/secondary"
+        android:id="@+id/botDivider"
+        android:layout_height="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivTrack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topDivider"
+        app:layout_constraintBottom_toBottomOf="@id/botDivider"
+        android:src="@color/teal_700"
+        tools:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+        android:id="@+id/tvTrackName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/ivTrack"
+        app:layout_constraintTop_toTopOf="@id/topDivider"
+        app:layout_constraintBottom_toBottomOf="@id/botDivider"
+        android:layout_marginStart="8dp"
+        android:text="Track name"/>
+
+    <TextView
+        android:id="@+id/tvTrackAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_header"
+        app:layout_constraintStart_toEndOf="@id/tvTrackName"
+        app:layout_constraintTop_toTopOf="@id/topDivider"
+        app:layout_constraintBottom_toBottomOf="@id/botDivider"
+        android:layout_marginStart="8dp"
+        android:text="Author"/>
+
+    <ImageView
+        android:id="@+id/ivStatus"
+        android:layout_width="16dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_pause"
+        app:layout_constraintTop_toTopOf="@id/topDivider"
+        app:layout_constraintBottom_toBottomOf="@id/botDivider"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

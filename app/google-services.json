@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "624918674124",
+    "project_id": "sandsara-mobile",
+    "storage_bucket": "sandsara-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624918674124:android:4c89187721e008a0cea069",
+        "android_client_info": {
+          "package_name": "com.ht117.sandsara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624918674124-ucmd6dk9gq5ckb8jmpurcs1osbqjblot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNn18RootwqQOb4XafyYZuDup3tHWu1NQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624918674124-ucmd6dk9gq5ckb8jmpurcs1osbqjblot.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "624918674124-gug99bv7qk7iku3tndbr70eqgpcjrh4a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ios.sandsara"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

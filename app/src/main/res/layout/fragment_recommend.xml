@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.ht117.sandsara.view.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvRecommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_view"
+        style="@style/H2"
+        android:text="@string/recommendPlaylist"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvRecommend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_thumb"
+        tools:itemCount="10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/tvPlaylistError"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        style="@style/H2"
+        android:src="@drawable/ic_network_err"
+        android:gravity="center"
+        android:text="@string/no_recommend_playlist"
+        tools:visibility="visible"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="@id/rv_playlist"
+        app:layout_constraintBottom_toBottomOf="@id/rv_playlist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/loading_playlist"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:indeterminate="true"
+        app:layout_constraintStart_toStartOf="@id/rv_playlist"
+        app:layout_constraintEnd_toEndOf="@id/rv_playlist"
+        app:layout_constraintTop_toTopOf="@id/rv_playlist"
+        app:layout_constraintBottom_toBottomOf="@id/rv_playlist"/>
+
+    <TextView
+        android:id="@+id/tvNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_playlist"
+        style="@style/H2"
+        android:text="@string/recommendTracks"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tracks"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_margin="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        tools:listitem="@layout/item_thumb"
+        tools:itemCount="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNew"/>
+
+    <TextView
+        android:id="@+id/tvTrackError"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        style="@style/H2"
+        android:text="@string/no_recommend_track"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="@id/rv_tracks"
+        app:layout_constraintBottom_toBottomOf="@id/rv_tracks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/loading_track"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:indeterminate="true"
+        app:layout_constraintStart_toStartOf="@id/rv_tracks"
+        app:layout_constraintEnd_toEndOf="@id/rv_tracks"
+        app:layout_constraintTop_toTopOf="@id/rv_tracks"
+        app:layout_constraintBottom_toBottomOf="@id/rv_tracks"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

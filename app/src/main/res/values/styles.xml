@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SandBtn">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <declare-styleable name="SandButton">
+        <attr name="sb_icon" format="reference"/>
+        <attr name="sb_title" format="string"/>
+        <attr name="sb_sub_icon" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="InputView">
+        <attr name="ip_hint" format="string"/>
+    </declare-styleable>
+
+    <style name="SandTitle">
+        <item name="android:textColor">@color/text_header</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">23sp</item>
+    </style>
+
+    <style name="SandAuthor">
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SandTrackTitle">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/text_header</item>
+    </style>
+
+    <style name="BotNavView">
+        <item name="itemIconTint">@color/item_bot_bg</item>
+        <item name="itemTextColor">@color/item_bot_bg</item>
+        <item name="itemRippleColor">@color/white</item>
+    </style>
+
+    <style name="SandDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:topLeftRadius">16dp</item>
+        <item name="android:topRightRadius">16dp</item>
+        <item name="android:backgroundDimAmount">.6</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <declare-styleable name="ColorSeekBar">
+        <attr name="colorSeeds" format="reference" />
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="startPoint" format="enum">
+            <enum name="start" value="-1"/>
+            <enum name="middle" value="0"/>
+            <enum name="end" value="1"/>
+        </attr>
+        <attr name="barHeight" format="dimension"/>
+        <attr name="thumbBorder" format="dimension"/>
+        <attr name="thumbBorderColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ColorSlider">
+        <attr name="cs_colorSeeds" format="reference"/>
+        <attr name="cs_barHeight" format="dimension"/>
+    </declare-styleable>
+
+    <style name="Ag">
+        <item name="font">@font/opensans_regular</item>
+        <item name="fontWeight">300</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#e8e8e8</item>
+    </style>
+
+    <declare-styleable name="NumberLoadingView">
+        <attr name="nlv_txtSize" format="dimension"/>
+        <attr name="nlv_loadedColor" format="color"/>
+        <attr name="nlv_unloadedColor" format="color"/>
+        <attr name="nlv_txtColor" format="color"/>
+        <attr name="nlv_strokeWidth" format="dimension"/>
+        <attr name="nlv_min" format="integer"/>
+        <attr name="nlv_max" format="integer"/>
+        <attr name="nlv_showText" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SearchView">
+        <attr name="android:editable" format="boolean"/>
+    </declare-styleable>
+
+</resources>

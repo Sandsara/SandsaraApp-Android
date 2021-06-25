@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ivPreset"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_margin="4dp"
+    tools:src="@color/teal_200"
+    android:scaleType="centerCrop" />

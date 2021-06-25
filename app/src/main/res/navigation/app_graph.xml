@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph.xml"
+    app:startDestination="@id/splash">
+
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.ht117.sandsara.ui.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/splash_to_home"
+            app:destination="@id/home" />
+
+        <action
+            android:id="@+id/splash_to_setup"
+            app:destination="@id/setup"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/setup"
+        android:name="com.ht117.sandsara.ui.setup.SetupFragment"
+        tools:layout="@layout/fragment_setup">
+
+        <action
+            android:id="@+id/setup_to_discovery"
+            app:destination="@id/discovery"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/discovery"
+        android:name="com.ht117.sandsara.ui.setup.DiscoverFragment"
+        tools:layout="@layout/fragment_discover">
+
+        <action
+            android:id="@+id/discovery_to_home"
+            app:destination="@id/home"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.ht117.sandsara.ui.recommend.RecommendFragment"
+        tools:layout="@layout/fragment_recommend">
+        <action
+            android:id="@+id/recommend_to_playlist"
+            app:destination="@id/playlist" />
+
+        <action
+            android:id="@+id/recommend_to_browse"
+            app:destination="@id/browse"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/browse"
+        android:name="com.ht117.sandsara.ui.browse.BrowseFragment"
+        tools:layout="@layout/fragment_browse"/>
+
+    <fragment
+        android:id="@+id/library"
+        android:name="com.ht117.sandsara.ui.library.LibraryFragment"
+        tools:layout="@layout/fragment_library">
+
+        <action
+            android:id="@+id/library_to_track"
+            app:destination="@id/tracks" />
+
+        <action
+            android:id="@+id/library_to_playlist"
+            app:destination="@id/playlists" />
+
+        <action
+            android:id="@+id/all_playlist_to_detail"
+            app:destination="@id/playlist" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tracks"
+        android:name="com.ht117.sandsara.ui.library.track.AllTrackFragment"
+        tools:layout="@layout/fragment_all_track" />
+
+    <fragment
+        android:id="@+id/playlists"
+        android:name="com.ht117.sandsara.ui.library.playlist.AllPlaylistFragment"
+        tools:layout="@layout/fragment_all_playlist">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/playlist"
+        android:name="com.ht117.sandsara.ui.library.playlist.detail.DetailPlaylistFragment"
+        tools:layout="@layout/fragment_detail_playlist">
+
+        <action
+            android:id="@+id/detail_playlist_to_track"
+            app:destination="@id/track" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/track"
+        android:name="com.ht117.sandsara.ui.track.TrackFragment"
+        tools:layout="@layout/fragment_track">
+
+        <action android:id="@+id/add_track_to_playlist"
+            app:destination="@id/add_to_playlist"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/sync_track"
+        android:name="com.ht117.sandsara.ui.sync.SyncFragment"
+        tools:layout="@layout/fragment_sync">
+
+        <action
+            android:id="@+id/sync_to_playing"
+            app:destination="@id/playing"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_to_playlist"
+        android:name="com.ht117.sandsara.ui.track.addtoplaylist.AddToPlaylistFragment"
+        tools:layout="@layout/fragment_add_to_playlist"/>
+
+    <fragment
+        android:id="@+id/playing"
+        android:name="com.ht117.sandsara.ui.playing.PlayingFragment"
+        tools:layout="@layout/fragment_now_playing" />
+
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.ht117.sandsara.ui.settings.SettingFragment"
+        tools:layout="@layout/fragment_setting">
+
+        <action
+            android:id="@+id/setting_to_advance"
+            app:destination="@id/advance_setting" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/advance_setting"
+        android:name="com.ht117.sandsara.ui.settings.advance.AdvanceFragment"
+        tools:layout="@layout/fragment_advance_settings">
+
+        <action android:id="@+id/advance_to_setup"
+            app:destination="@id/discovery"/>
+
+        <action android:id="@+id/advance_to_upgrade"
+            app:destination="@id/upgrade"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/upgrade"
+        android:name="com.ht117.sandsara.ui.sync.UpgradeFragment"
+        tools:layout="@layout/fragment_sync"/>
+
+    <action
+        android:id="@+id/navigate_to_track"
+        app:destination="@id/track" />
+
+    <action
+        android:id="@+id/navigate_to_playlist"
+        app:destination="@id/playlist"/>
+
+    <action
+        android:id="@+id/navigate_to_playing"
+        app:destination="@id/playing" />
+
+    <action android:id="@+id/navigate_to_sync"
+        app:destination="@id/sync_track"/>
+
+</navigation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="device_card" type="id"/>
+    <item name="mini_player" type="id"/>
+
+    <string-array name="full_color">
+        <item>#ff0000</item>
+        <item>#faff00</item>
+        <item>#14ff00</item>
+        <item>#00fff0</item>
+        <item>#0500ff</item>
+        <item>#e400ff</item>
+        <item>#e400ff</item>
+        <item>#ff0000</item>>
+    </string-array>
+
+    <string-array name="warm">
+        <item>#787878</item>
+        <item>#73c955</item>
+    </string-array>
+
+    <string-array name="alpha">
+        <item>#000000</item>
+        <item>#ffffff</item>
+    </string-array>
+
+</resources>

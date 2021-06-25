@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <dimen name="design_bottom_navigation_height" tools:override="true">64dp</dimen>
+
+    <!-- From figma -->
+    <style name="H1">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#c4c4c4</item>
+<!--        <item name="lineHeight">34sp</item>-->
+        <item name="android:fontFamily">@font/tinos_regular</item>
+    </style>
+    <style name="Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#c4c4c4</item>
+<!--        <item name="lineHeight">25sp</item>-->
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+    <style name="H4">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#c4c4c4</item>
+<!--        <item name="lineHeight">19sp</item>-->
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+    <style name="Navigation">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#c4c4c4</item>
+    </style>
+    <style name="MiniTitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#c4c4c4</item>
+<!--        <item name="lineHeight">16sp</item>-->
+        <item name="android:fontFamily">@font/opensans_bold</item>
+    </style>
+    <style name="MiniAuthor">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#c4c4c4</item>
+<!--        <item name="lineHeight">16sp</item>-->
+        <item name="android:fontFamily">@font/opensans_light</item>
+    </style>
+    <style name="Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#c4c4c4</item>
+<!--        <item name="lineHeight">19sp</item>-->
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+    </style>
+    <style name="Author">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#c4c4c4</item>
+<!--        <item name="lineHeight">14sp</item>-->
+        <item name="android:fontFamily">@font/opensans_light</item>
+    </style>
+    <style name="H2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#c4c4c4</item>
+<!--        <item name="lineHeight">23sp</item>-->
+        <item name="android:fontFamily">@font/tinos_regular</item>
+    </style>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView android:id="@+id/ivThumb"
+    android:layout_width="128dp"
+    android:layout_height="128dp"
+    android:src="@drawable/ic_track"
+    android:layout_margin="8dp"
+    android:adjustViewBounds="true"
+    tools:tint="@color/white"
+    android:scaleType="fitCenter"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" />

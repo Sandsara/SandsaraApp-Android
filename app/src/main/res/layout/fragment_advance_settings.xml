@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="16dp"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_back"/>
+
+    <TextView
+        android:id="@+id/tv_advance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        style="@style/H1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back"
+        android:text="@string/advance_setting"/>
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginTop="16dp"
+        style="@style/H2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_advance"
+        android:text="@string/about"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginTop="16dp"
+        style="@style/Button"
+        android:textColor="@color/secondary"
+        android:text="Name: Sandsara"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_about"/>
+
+    <TextView
+        android:id="@+id/tv_change_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginTop="16dp"
+        style="@style/Button"
+        android:textColor="@color/primary"
+        android:text="@string/change_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"/>
+
+    <TextView
+        android:id="@+id/tv_firmware"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        style="@style/Button"
+        android:textColor="@color/secondary"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_change_name"
+        android:text="Current firmware: 1.09.1"/>
+
+    <TextView
+        android:id="@+id/tv_firmware_updatable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        style="@style/Button"
+        android:textColor="@color/firmware_update"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:text="Firmware update avaiable: 1.10.2"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tv_firmware"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginTop="16dp"
+        style="@style/Button"
+        android:textColor="@color/download"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tv_firmware_updatable"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/download"/>
+
+    <com.ht117.sandsara.view.NumberLoadingView
+        android:id="@+id/nlv_progress"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tv_download"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:nlv_loadedColor="@color/download"
+        app:nlv_showText="false"
+        app:nlv_unloadedColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_factory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginTop="16dp"
+        style="@style/Button"
+        android:textColor="@color/primary"
+        android:text="@string/factory_reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nlv_progress"/>
+
+    <TextView
+        android:id="@+id/tv_connect_other_sand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        tools:visibility="visible"
+        android:layout_marginTop="16dp"
+        style="@style/Button"
+        android:textColor="@color/primary"
+        android:text="@string/connect_to_other_sand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_factory"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

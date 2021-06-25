@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:background="@color/secondary"
+        android:id="@+id/topDivider"
+        android:layout_height="2dp"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/secondary"
+        android:id="@+id/botDivider"
+        android:layout_height="2dp"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivInfo"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        tools:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topDivider"
+        app:layout_constraintBottom_toTopOf="@id/nlv_progress"
+        android:src="@drawable/ic_exclamation"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/ivInfo"
+        app:layout_constraintTop_toBottomOf="@id/topDivider"
+        app:layout_constraintBottom_toTopOf="@id/nlv_progress"
+        android:layout_marginStart="8dp"
+        tools:visibility="invisible"
+        android:text="@string/no_device_found"/>
+
+    <ImageView
+        android:id="@+id/ivStatus"
+        android:layout_width="16dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_retry"
+        app:layout_constraintTop_toBottomOf="@id/topDivider"
+        app:layout_constraintBottom_toTopOf="@id/nlv_progress"
+        app:layout_constraintEnd_toStartOf="@id/tvRetry"/>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:indeterminate="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nlv_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvRetry"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:text="@string/retry"
+        style="@style/MiniAuthor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topDivider"
+        app:layout_constraintBottom_toTopOf="@id/nlv_progress"/>
+
+    <com.ht117.sandsara.view.NumberLoadingView
+        android:id="@+id/nlv_progress"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botDivider"
+        app:nlv_showText="false"
+        app:nlv_strokeWidth="4dp"
+        app:nlv_unloadedColor="@color/secondary"
+        app:nlv_loadedColor="@color/white"
+        app:nlv_min="0"
+        app:nlv_max="100"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
